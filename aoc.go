@@ -1,12 +1,13 @@
 package main
 
 import (
+	"aoc/aoc"
 	"os"
 )
 
 func main() {
 	in := getinput()
-	day1(in)
+	aoc.Day3(in)
 }
 
 func getinput() string {

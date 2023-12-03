@@ -1,4 +1,4 @@
-package main
+package aoc
 
 import (
 	"fmt"
@@ -30,7 +30,7 @@ func (a ByIdx) Len() int           { return len(a) }
 func (a ByIdx) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByIdx) Less(i, j int) bool { return a[i].index < a[j].index }
 
-func day1(in string) {
+func Day1(in string) {
 	arr := strings.Split(in, "\n")
 	sum1 := 0
 	sum2 := 0
