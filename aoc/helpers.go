@@ -2,7 +2,13 @@ package aoc
 
 import (
 	"strconv"
+	"strings"
 )
+
+func isNumber(r rune) bool {
+	_, err := strconv.Atoi(string(r))
+	return err == nil
+}
 
 func sum(arr []int) int {
 	s := 0
@@ -38,4 +44,29 @@ func tointarray(s []string) []int {
 			e = append(e, []int{})
 		}
 	}
+*/
+
+func separate(file string, sep string) func() string {
+	offset := 0
+
+	return func() string {
+		if offset+len(sep) < len(file) {
+			i := strings.Index(file[offset:], sep)
+			if i == -1 {
+				return ""
+			}
+			temp := file[offset : offset+i]
+			offset += i + len(sep)
+			return temp
+		}
+		return ""
+	}
+}
+
+/*
+iter := separate(in, "\n")
+for i, row := iter(), 0; len(i) != 0; row++ {
+	fmt.Println(i)
+	i = iter()
+}
 */

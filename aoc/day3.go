@@ -11,11 +11,6 @@ type coord struct {
 	c int
 }
 
-func isNumber(r rune) bool {
-	_, err := strconv.Atoi(string(r))
-	return err == nil
-}
-
 func isSymbol(r rune) bool {
 	return !isNumber(r) && r != '.'
 }
