@@ -80,7 +80,6 @@ func handType(h hand, jokers bool) HandType {
 		}
 	}
 
-	// too low: 250193673
 	if jokers && cards['J'] > 0 {
 		cards[hiFreq] += cards['J']
 		cards['J'] = 0
