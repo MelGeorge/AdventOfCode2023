@@ -7,7 +7,7 @@ import (
 
 func main() {
 	in := getinput()
-	aoc.Day8(in)
+	aoc.Day9(in)
 }
 
 func getinput() string {
